@@ -1,22 +1,19 @@
-baseFunctions= . /functions/f_themes.cfg
-$baseFunctions
+#!/bin/bash
 
-pManagerFunction= . /functions/f_packageManager.cfg
-$pManagerFunction
+readonly basedir=$(pwd)
+rootdir=$basedir
 
-themeFunction= . /functions/f_themes.cfg
-$themeFunction
+fThemes= . "$rootdir"/functions/f_themes.cfg
+$fThemes
+
+fPManager= . "$rootdir"/functions/f_packageManager.cfg
+$fPManager
+
+###############################################################
 
 ## get the distro used, calling quid's script
-getDistro
-
-mainMenu
-
-
-
-fuction mainMenu
-{
-clear
+checkDistro
+echo $distro
 
     echo -e "Xmetal's Linux Theming Script \n"
     echo -e "Please Select your choice \n"
@@ -33,7 +30,8 @@ case $themeSelection in
 
   2) numixIcon ;;
 
-  q) # quit
+  q) clear
+      echo -e "Goodbye"
+      exit
 
 esac
-}
