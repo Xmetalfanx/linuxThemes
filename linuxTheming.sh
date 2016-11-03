@@ -13,7 +13,9 @@ $fPManager
 
 ## get the distro used, calling quid's script
 checkDistro
-echo $distro
+
+    clear
+    echo "It appears you may be running a " $distro "based distro"
 
     echo -e "Xmetal's Linux Theming Script \n"
     echo -e "Please Select your choice \n"
@@ -26,9 +28,9 @@ echo $distro
 
 case $themeSelection in
 
-  1) numixThemes ;;
+  1) numixThemes $distro ;;
 
-  2) numixIcon ;;
+  2) numixIcon  $distro ;;
 
   q) clear
       echo -e "Goodbye"
