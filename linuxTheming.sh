@@ -22,18 +22,23 @@ checkDistro
 
     echo -e   "1. \t Numix Themes"
     echo -e   "2. \t Numix Icon Themes"
+    echo -e   "3. \t Manjaro-fy (Batch Manjaro Theme & Icon Install)"
 
     echo -e   "q. \t Exit to Prompt \n\n"
     read -p   "Your Choice?:" themeSelection
 
 case $themeSelection in
 
+  ## Attempt to pass Distro variable for automatic installation based on distro your likely on... include a pause in the functions though
   1) numixThemes $distro ;;
 
   2) numixIcon  $distro ;;
 
+  3) bash $rootdir/functions/github/manjarofy.sh ;;
+
   q) clear
       echo -e "Goodbye"
       exit
+;;
 
 esac
