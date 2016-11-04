@@ -1,0 +1,11 @@
+Themes to possibly add
+
+VimixDark-Gtk   https://www.gnome-look.org/p/1013698/
+
+VimiLight-GTK  https://www.gnome-look.org/p/1099670/
+
+
+Windows 10 Transfermation pack - SCRIPT - https://www.gnome-look.org/p/1013482/  - USe at own risk 
+
+
+https://www.gnome-look.org/content/show.php/Maia-Manjaro+GTK?content=174942
