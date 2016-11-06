@@ -13,28 +13,34 @@ $fPManager
 
 ## get the distro used, calling quid's script
 checkDistro
+distroDetails=lsb_release -d
 
     clear
-    echo "It appears you may be running a " $distro "based distro"
+    echo "It appears you distro specifics are  $distroDetails "
 
-    echo -e "Xmetal's Linux Theming Script \n"
+    echo -e "\n\n Xmetal's Linux Theming Script \n"
     echo -e "Please Select your choice \n"
 
     echo -e   "1. \t Numix Themes"
     echo -e   "2. \t Numix Icon Themes"
     echo -e   "3. \t Manjaro-fy (Batch Manjaro Theme & Icon Install)"
+    echo -e   "4. \t Windows 10 Theme"
+    echo -e   "5. (Test only) GnomeLooks Numix "
 
     echo -e   "q. \t Exit to Prompt \n\n"
     read -p   "Your Choice?:" themeSelection
 
 case $themeSelection in
 
-  ## Attempt to pass Distro variable for automatic installation based on distro your likely on... include a pause in the functions though
-  1) numixThemes $distro ;;
+  1) numixThemes distro ;;
 
-  2) numixIcon  $distro ;;
+  2) numixIcon distro ;;
 
   3) bash $rootdir/functions/github/manjarofy.sh ;;
+
+  4) win10 ;;
+
+  5) numixGnomeLook ;;
 
   q) clear
       echo -e "Goodbye"
