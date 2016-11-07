@@ -9,6 +9,8 @@ $fThemes
 fPManager= . "$rootdir"/functions/f_packageManager.cfg
 $fPManager
 
+fCommon= . "$rootdir"/functions/f_common.cfg
+$fCommon
 ###############################################################
 
 ## get the distro used, calling quid's script
@@ -45,6 +47,8 @@ case $themeSelection in
   q) clear
       echo -e "Goodbye"
       exit
-;;
+
+
+  * )  invalidSection ;;
 
 esac
