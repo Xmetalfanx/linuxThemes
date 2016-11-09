@@ -1,26 +1,22 @@
 #!/bin/bash
 
 readonly basedir=$(pwd)
+export basedir
+
 rootdir=$basedir
 
-fThemes= . "$rootdir"/functions/f_themes.cfg
-$fThemes
+import= . "$rootdir"/functions/import.cfg
+$import
 
-fPManager= . "$rootdir"/functions/f_packageManager.cfg
-$fPManager
-
-fCommon= . "$rootdir"/functions/f_common.cfg
-$fCommon
 ###############################################################
-
 ## get the distro used, calling quid's script
 checkDistro
-distroDetails=lsb_release -d
+distro= lsb_release -d
 
     clear
-    echo "It appears you distro specifics are  $distroDetails "
+    echo -e "\nIt APPEARS you distro is $distro based "
 
-    echo -e "\n\n Xmetal's Linux Theming Script \n"
+    echo -e "\n\nXmetal's Linux Theming Script"
     echo -e "Please Select your choice \n"
 
     echo -e   "1. \t PPAs Submenu for Ubuntu releases"
@@ -31,38 +27,38 @@ distroDetails=lsb_release -d
     echo -e   "6. \t (Test only) GnomeLooks Numix "
     echo -e   "7. \t vimiDark GTK Theme"
     echo -e   "8. \t vimiLight GTK Theme"
-
+    echo -e   "9. \t Mint-Y Theme and Icon Packs"
 
     echo -e   "q. \t Exit to Prompt \n\n"
     read -p   "Your Choice?:" themeSelection
 
 case $themeSelection in
 
-  1) numixThemes distro ;;
+  1) bash $rootdir/functions/ppaThemes.sh ;;
 
-  2) numixIcon distro ;;
+  2) numixThemes distro ;;
 
-  3) bash $rootdir/functions/github/manjarofy.sh ;;
+  3) numixIcon distro ;;
 
-  4) win10 ;;
+  4) bash $rootdir/functions/github/manjarofy.sh ;;
 
-  5) numixGnomeLook ;;
+  5) win10 ;;
 
-  6) vimiDarkGTK ;;
+  6) numixGnomeLook ;;
 
-  7) vimiLightGTK ;;
+  7) vimiDarkGTK ;;
 
+  8) vimiLightGTK ;;
 
+  9)
+     MintyThemes
+     MintyIcons
+     echo "installed Mint-Y" ;;
 
-  9) numixGnomeLook2 ;;
+  10) numixGnomeLook2 ;;
 
-  q) clear
-      echo -e "Goodbye"
-      exit
+  q) quitScript ;;
 
-    ;;
-
-
-  * )  invalidSection ;;
+  *) invalidSection ;;
 
 esac
