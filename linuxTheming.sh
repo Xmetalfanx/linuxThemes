@@ -38,19 +38,21 @@ distroDetails=lsb_release -d
 
 case $themeSelection in
 
-  1) numixThemes distro ;;
+  1) $rootdir/funcction/ppaThemes.sh ;;
 
-  2) numixIcon distro ;;
+  2) numixThemes distro ;;
 
-  3) bash $rootdir/functions/github/manjarofy.sh ;;
+  3) numixIcon distro ;;
 
-  4) win10 ;;
+  4) bash $rootdir/functions/github/manjarofy.sh ;;
 
-  5) numixGnomeLook ;;
+  5) win10 ;;
 
-  6) vimiDarkGTK ;;
+  6) numixGnomeLook ;;
 
-  7) vimiLightGTK ;;
+  7) vimiDarkGTK ;;
+
+  8) vimiLightGTK ;;
 
 
 
