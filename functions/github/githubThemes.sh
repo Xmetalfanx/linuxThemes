@@ -1,19 +1,18 @@
 #!/bin/sh
+
 rootdir=$basedir
 
 commonFunctions= . $rootdir/tasks/functions/f_common.cfg
 $commonFunctions
 
-gitFunction= . $rootdir/tasks/themes/github/functions/gitFunctions.cfg
+gitFunction= . $rootdir/functions/github/gitFunctions.cfg
 $gitFunction
 
 #######################################################################
 x=1
 clear
 
-
 while [[ $x=1 ]]; do
-
 
     echo -e   "What Theme would you like to install? "
     echo -e   "1) \t Arc Theme and Icons Pack"
@@ -36,7 +35,7 @@ while [[ $x=1 ]]; do
 
         2) MintyThemes
            MintyIcons
-					 echo "installed Minty"
+					 echo "installed Mint-Y"
            x=1
            ;;
 
@@ -49,7 +48,7 @@ while [[ $x=1 ]]; do
 
             ;;
 
-        [mM])	
+        [mM])
               ;;
 
         [qQ]) $commonFunctions

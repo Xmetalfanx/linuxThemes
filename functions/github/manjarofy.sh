@@ -7,13 +7,11 @@
 
 rootdir=$basedir
 
-commonFunctions= . $rootdir/tasks/f_common.cfg
-$commonFunctions
+import= . "$rootdir"/functions/import.cfg
+$import
 
-manjaroScripts= . $rootdir/functions/github/gitManjaro.cfg
+manjaroScripts= . "$rootdir"/functions/github/gitManjaro.cfg
 $manjaroScripts
-
-
 ###################################################
 
 echo "Xmetal's Manjaro-afication Script\n"
