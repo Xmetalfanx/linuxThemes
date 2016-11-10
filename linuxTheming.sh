@@ -34,7 +34,7 @@ distro= lsb_release -d
 
 case $themeSelection in
 
-  1) bash $rootdir/functions/ppaThemes.sh ;;
+  1) $rootdir/funcction/ppaThemes.sh ;;
 
   2) numixThemes distro ;;
 
@@ -50,8 +50,7 @@ case $themeSelection in
 
   8) vimiLightGTK ;;
 
-  9)
-     MintyThemes
+  9)  MintyThemes
      MintyIcons
      echo "installed Mint-Y" ;;
 
