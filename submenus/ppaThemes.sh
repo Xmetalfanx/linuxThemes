@@ -4,6 +4,7 @@ rootdir=$basedir
 import= . "$rootdir"/functions/import.cfg
 $import
 
+
   clear
 
   echo -e "Theme PPA Menu"
