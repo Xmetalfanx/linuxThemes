@@ -10,34 +10,42 @@ $import
 
 ###############################################################
 ## get the distro used, calling quid's script
-checkDistro
+checkDistro2
 distro=$(lsb_release -d)
 release=$(lsb_release -r)
 
-    clear
-    echo -e "\nIt APPEARS you distro is $distro based "
+  distrobase=${osrelease#"ID_LIKE="}
 
-    echo -e "\n\nXmetal's Linux Theming Script"
+
+  clear
+
+  echo -e "Xmetal's Linux Theming Script\n"
+
+
+  echo -e "Your distro appears to be ${distrobase} based"
+
+    echo -e "\nIt APPEARS you distro is $distro "
+
     echo -e "Please Select your choice \n"
 
     echo -e   "1. \t PPAs Ubuntu Submenu"
     echo -e   "2. \t Numix Themes and Icon Submenu"
     echo -e   "3. \t Manjaro-fy (Batch Manjaro Theme & Icon Install)"
-    echo -e   "5. \t Windows 10 Theme"
+    echo -e   "4. \t Windows 10 Theme"
     echo -e   "5. \t (Test only) GnomeLooks Numix "
     echo -e   "6. \t vimiDark GTK Theme"
     echo -e   "7. \t vimiLight GTK Theme"
     echo -e   "8. \t Mint-Y Theme and Icon Packs"
+    echo -e   "9. \t(TESTING ONLY) Testing variables with URls"
 
     echo -e   "q. \t Exit to Prompt \n\n"
     read -p   "Your Choice?:" themeSelection
 
 case $themeSelection in
 
-  1) $rootdir/submenus/ppaThemes.sh ;;
+  1) bash $rootdir/submenus/ppaThemes.sh ;;
 
-  2) $rootdir/submenus/numix.sh ;;
-
+  2) bash $rootdir/submenus/numix.sh ;;
 
   3) bash $rootdir/functions/github/manjarofy.sh ;;
 
