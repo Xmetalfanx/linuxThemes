@@ -21,9 +21,7 @@ release=$(lsb_release -r)
 
   echo -e "Xmetal's Linux Theming Script\n"
 
-
   echo -e "Your distro appears to be ${distrobase} based"
-
     echo -e "\nIt APPEARS you distro is $distro "
 
     echo -e "Please Select your choice \n"
@@ -61,7 +59,9 @@ case $themeSelection in
      MintyIcons
      echo "installed Mint-Y" ;;
 
-  9) numixGnomeLook2 ;;
+  9) read -p "Please enter a URL:" testURL
+
+     stripFileInfo $testURL ;;
 
   q) quitScript ;;
 
