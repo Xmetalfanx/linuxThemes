@@ -11,8 +11,7 @@ $import
 ###############################################################
 ## get the distro used, calling quid's script
 checkDistro2
-distro=$(lsb_release -d)
-release=$(lsb_release -r)
+
 
   distrobase=${osrelease#"ID_LIKE="}
 
