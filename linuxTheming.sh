@@ -12,12 +12,9 @@ $import
 ## get the distro used, calling quid's script
 checkDistro2
 
-
   distrobase=${osrelease#"ID_LIKE="}
 
-
   clear
-
   echo -e "Xmetal's Linux Theming Script\n"
 
   echo -e "Your distro appears to be ${distrobase} based"
