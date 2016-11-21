@@ -7,11 +7,9 @@
 
 rootdir=$basedir
 
-import= . "$rootdir"/functions/import.cfg
-$import
+manjaroMass= . "$rootdir"/functions/github/manjaro/massManjaroGit.cfg
+$manjaroMass
 
-manjaroScripts= . "$rootdir"/functions/github/gitManjaro.cfg
-$manjaroScripts
 ###################################################
 
 echo "Xmetal's Manjaro-afication Script\n"
