@@ -2,9 +2,6 @@
 
 rootdir=$basedir
 
-commonFunctions= . $rootdir/tasks/functions/f_common.cfg
-$commonFunctions
-
 gitFunction= . $rootdir/functions/github/gitFunctions.cfg
 $gitFunction
 
