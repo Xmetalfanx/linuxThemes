@@ -7,22 +7,23 @@
 
 rootdir=$basedir
 
-manjaroMass= . "$rootdir"/functions/github/manjaro/massManjaroGit.cfg
+manjaroMass= . "$rootdir"/functions/github/manjaro/f_ManjaroCurrent.cfg
 $manjaroMass
 
 ###################################################
 
 echo "Xmetal's Manjaro-afication Script\n"
 
-vertex-maia-icon-themes
-MaiaCursor
+## themes
 VertexTheme
-
 ArtworkMaiaThemes
-VertexMaiaIconPack
-numixManjaroTheme
-numixRebornTheme
-
-maiaCursor
+MaiaGTKThemes
 vertexManjaroTheme
-MaiaGTKTheme
+
+# Icons
+#VertexMaiaIcon
+
+#cursors
+## Which one to use?
+#maiaCursor
+#maiaCursor
