@@ -1,1 +1,8 @@
 .git/
+
+
+*.tar.gz
+*.tar.bz
+*.tgz
+
+*.key
