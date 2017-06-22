@@ -26,4 +26,6 @@ echo -e "Xmetal's Linux Theming Script\n"
 
     2) macOSSierra ;;
 
-  esac 
+    q) exit ;;
+
+  esac
