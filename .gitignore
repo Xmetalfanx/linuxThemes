@@ -4,5 +4,6 @@
 *.tar.gz
 *.tar.bz
 *.tgz
+*.tar.xz 
 
 *.key
