@@ -39,13 +39,21 @@ checkDistro2
 
 case $themeSelection in
 
-  1) bash $rootdir/submenus/ppaThemes.sh ;;
+  1) bash $rootdir/submenus/ppaThemes.sh
 
-  2) bash $rootdir/submenus/macRelated.sh ;;
+  ;;
 
-  3) bash $rootdir/submenus/numix.sh ;;
+  2) bash $rootdir/submenus/macRelated.sh
 
-  4) bash $rootdir/submenu/manjarofy.sh ;;
+  ;;
+
+  3) bash $rootdir/submenus/numix.sh
+
+  ;;
+
+  4) manjarofy
+
+  ;;
 
   5) MintyThemes
      MintyIcons
