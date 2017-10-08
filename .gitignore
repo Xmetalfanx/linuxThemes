@@ -1,9 +1,7 @@
 .git/
 
-
-*.tar.gz
-*.tar.bz
-*.tgz
-*.tar.xz 
-
-*.key
+**/*.tar.gz
+**/*.tar.bz
+**/*.tgz
+**/*.tar.xz 
+**/*.key
