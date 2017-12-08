@@ -26,13 +26,13 @@ while [[ $x=1 ]]; do
         1)  gitArcThemes
             gitArcIcons
             gitArcOpenBox
-					  echo "installed Arc"
+			echo "installed Arc"
             x=1
             ;;
 
         2) MintyThemes
            MintyIcons
-					 echo "installed Mint-Y"
+			echo "installed Mint-Y"
            x=1
            ;;
 
