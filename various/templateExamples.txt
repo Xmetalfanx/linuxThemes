@@ -1,14 +1,14 @@
 # If statement  template
-   if [ "${distro}" == "arch" ]; then
+   if [ "$distro" == 'arch' ]; then
       echo "Add Lines to add AUR and Numix ICONS here"
 
-    elif [ "${distro}" == "fedora" ]; then
+    elif [ "$distro" == 'fedora' ]; then
         fedoraInstall
 
-    elif [ "${distro}" == "opensuse" ]; then
+    elif [ "$distro" == 'opensuse' ]; then
        echo "Add Lines to add Numix to OpenSuse Here"
 
-    elif [ "${distro}" == "ubuntu" ]; then
+    elif [ "$distro" == 'ubuntu' ]; then
 
         ## Message to User
         clear
