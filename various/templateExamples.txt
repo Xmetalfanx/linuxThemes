@@ -10,23 +10,6 @@
 
     elif [ "$distro" == 'ubuntu' ]; then
 
-        ## Message to User
-        clear
-        echo -e "Adding Numix PPA "
-
-        ## Line to add PPA and refresh repos  ... If Needed
-        addPPA "ppa:numix/ppa"
-        clear
-        updateAptRepos
-
-
-        # Assigns packageName Variable
-        packageName1= numix-icon-theme
-        packageName2= numix-icon-theme-circle
-
-        # Call function to install
-        Install_Apt "$packageName1" "$packageName2"
-
     else
          echo "Tarball download and installs coming soon"
     fi
