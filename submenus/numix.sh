@@ -1,10 +1,8 @@
 /bin/bash
-rootdir=$basedir
 
-import= . "$rootdir"/functions/import.cfg
-$import
+. $functionsdir/import.cfg
 
-  clear
+clear
 
   echo -e "Numix Theme SubMenu"
   echo -e "1. \t Install Numix Theme "

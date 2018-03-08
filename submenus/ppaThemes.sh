@@ -1,8 +1,6 @@
 #!/bin/bash
-rootdir=$basedir
 
-import= . "$rootdir"/functions/import.cfg
-$import
+. $functionsdir/import.cfg
 
 
   clear
