@@ -1,12 +1,10 @@
 #!/bin/bash
 
-readonly basedir=$(pwd)
-export basedir
+# Import Functions 
+readonly dir=$(eval pwd)
+readonly functionsdir=$(eval pwd)/functions/
 
-rootdir=$basedir
-
-import= . "$rootdir"/functions/import.cfg
-$import
+. $functionsdir/import.cfg
 
 ###############################################################
 ## get the distro used, calling quid's script
