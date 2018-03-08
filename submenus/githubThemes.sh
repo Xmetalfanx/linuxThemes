@@ -1,9 +1,6 @@
 #!/bin/sh
 
-rootdir=$basedir
-
-gitFunction= . $rootdir/functions/github/gitFunctions.cfg
-$gitFunction
+. $functionsdir/github/gitFunctions.cfg
 
 #######################################################################
 x=1

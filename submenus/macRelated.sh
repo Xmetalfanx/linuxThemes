@@ -1,12 +1,7 @@
 #!/bin/bash
 
-readonly basedir=$(pwd)
-export basedir
+. $functionsdir/import.cfg
 
-rootdir=$basedir
-
-import= . "$rootdir"/functions/import.cfg
-$import
 #############################################
 
 clear
