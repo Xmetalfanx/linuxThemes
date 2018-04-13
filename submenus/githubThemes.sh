@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 . $functionsdir/github/gitFunctions.cfg
 
