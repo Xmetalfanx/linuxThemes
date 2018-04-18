@@ -10,9 +10,15 @@ readonly functionsdir=$(eval pwd)/functions/
 ## get the distro used, calling quid's script
 checkDistro2
 
-  distrobase=${osrelease#"ID_LIKE="}
+## Why is this here anymore? 
+distrobase=${osrelease#"ID_LIKE="}
 
-  clear
+x=1 
+
+clear
+
+while [ $x=1 ]; do
+
   echo -e "Xmetal's Linux Theming Script\n"
 
   echo -e "Your distro appears to be ${distrobase} based"
@@ -38,19 +44,19 @@ checkDistro2
 case $themeSelection in
 
   1) bash $rootdir/submenus/ppaThemes.sh
-
+  x=1 
   ;;
 
   2) bash $rootdir/submenus/macRelated.sh
-
+    x=1
   ;;
 
   3) bash $rootdir/submenus/numix.sh
-
+    x=1
   ;;
 
   4) manjarofy
-
+    x=1
   ;;
 
   5) MintyThemes
@@ -66,11 +72,17 @@ case $themeSelection in
       x=1
       ;;
 
-  7) win10 ;;
+  7) win10 
+    x=1
+    ;;
 
-  8) vimiDarkGTK ;;
+  8) vimiDarkGTK 
+    x=1
+    ;;
 
-  9) vimiLightGTK ;;
+  9) vimiLightGTK 
+      x=1
+      ;;
 
 
   t) read -p "Please enter a URL:" testURL
@@ -83,3 +95,5 @@ case $themeSelection in
   *) invalidSection ;;
 
 esac
+
+done 
