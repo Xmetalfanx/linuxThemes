@@ -6,7 +6,7 @@
 x=1
 clear
 
-while [[ $x=1 ]]; do
+while [[ "$x" = "1" ]]; do
 
     echo -e   "What Theme would you like to install? "
     echo -e   "1) \t Arc Theme and Icons Pack"
@@ -16,7 +16,7 @@ while [[ $x=1 ]]; do
     echo -e 	"M) \t Return to Main Menu"
     echo -e		"Q) \t Exit to Prompt\n\n"
 
-    read -p "Your Choice?:" gitThemeSelection
+    read -r -p "Your Choice?:" gitThemeSelection
 
     case $gitThemeSelection in
 

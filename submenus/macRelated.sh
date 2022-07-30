@@ -12,7 +12,7 @@ echo -e "Xmetal's Linux Theming Script\n"
   echo -e   "2. \t MacOS Sierra GTK3 Theme "
 
   echo -e   "q. \t Exit to Prompt \n\n"
-  read -p   "Your Choice?:" themeSelection
+  read -r -p   "Your Choice?:" themeSelection
 
   case $themeSelection in
 

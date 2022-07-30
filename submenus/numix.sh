@@ -8,7 +8,7 @@ clear
   echo -e "1. \t Install Numix Theme "
   echo -e "2. \t Install Numix Icon Theme "
   echo -e "3. (Future Idea) Numix Frost Theme "
-  read -p   "Your Choice?:" choice
+  read -r -p   "Your Choice?:" choice
 
 case $choice in
 
