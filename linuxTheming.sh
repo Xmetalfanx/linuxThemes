@@ -17,7 +17,7 @@ x=1
 
 clear
 
-while [ $x=1 ]; do
+while [ "$x" = "1" ]; do
 
   echo -e "Xmetal's Linux Theming Script\n"
 
@@ -37,27 +37,26 @@ while [ $x=1 ]; do
     echo -e   "8. \t vimiDark GTK Theme"
     echo -e   "9. \t vimiLight GTK Theme"
 
-
     echo -e   "q. \t Exit to Prompt \n\n"
-    read -p   "Your Choice?:" themeSelection
+    read -r -p   "Your Choice?:" themeSelection
 
 case $themeSelection in
 
-  1) bash $rootdir/submenus/ppaThemes.sh
-  x=1 
-  ;;
+  1)  bash $rootdir/submenus/ppaThemes.sh
+      x=1 
+      ;;
 
-  2) bash $rootdir/submenus/macRelated.sh
-    x=1
-  ;;
+  2)  bash $rootdir/submenus/macRelated.sh
+      x=1
+      ;;
 
   3) bash $rootdir/submenus/numix.sh
-    x=1
-  ;;
+     x=1
+      ;;
 
   4) manjarofy
-    x=1
-  ;;
+     x=1
+      ;;
 
   5) MintyThemes
      MintyIcons
@@ -85,7 +84,7 @@ case $themeSelection in
       ;;
 
 
-  t) read -p "Please enter a URL:" testURL
+  t) read -r -p "Please enter a URL:" testURL
 
      stripFileInfo $testURL ;;
 
